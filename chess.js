@@ -7,8 +7,8 @@ var score = document.getElementById("score");
 let char = ["A", "B", "C", "D", "E", "F", "G", "H"];
 let num = [1, 2, 3, 4, 5, 6, 7, 8];
 let points = 0;
-function getRandomInt(inta) {
-  return Math.floor(Math.random() * inta);
+function getRandomInt(integer) {
+  return Math.floor(Math.random() * integer);
 }
 var getRandomValue = () => `${char[getRandomInt(7)]}${num[getRandomInt(7)]}`;
 let action = getRandomValue();
