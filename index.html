@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chess Game</title>
-        <link rel="stylesheet" href="../Lab 5&6/style.css">
-        <script src="../Lab 5&6/chess.js" defer></script>
-        <link rel="Shortcut Icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/390px-ChessSet.jpg">
-    </head>
-    <body>
-            <div class="challange">
-                <div id="header"><p>Vision</p></div>
-                <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/330px-ChessSet.jpg" alt="soldier" style="margin-left: 90px; width: 50%; height: 50%; margin-top: 15px;"></div>
-                <button type="submit" id="startGame" class="start" onclick="startGame()">START</button>
-                <div id="time">Timer: </div>
-                <div id="action2">Action: <div id="action"></div></div>
-                <div id="score">Score: </div>
-            </div>
-            <table id="chessboard">
-                    <tr>
-                        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/68px-Chess_rdt45.svg.png" alt="palace"></td>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./chess.js" defer></script>
+    <link
+      rel="Shortcut Icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/390px-ChessSet.jpg"
+    />
+  </head>
+  <body>
+    <div class="challange">
+      <div id="header"><p>Vision</p></div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/330px-ChessSet.jpg"
+          alt="soldier"
+          style="margin-left: 90px; width: 50%; height: 50%; margin-top: 15px"
+        />
+      </div>
+      <button type="submit" id="startGame" class="start" onclick="startGame()">
+        START
+      </button>
+      <div id="time">Timer:</div>
+      <div id="action2">
+        Action:
+        <div id="action"></div>
+      </div>
+      <div id="score">Score:</div>
+    </div>
+    <table id="chessboard">
+      <tr>
+        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/68px-Chess_rdt45.svg.png" alt="palace"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/68px-Chess_ndt45.svg.png" alt="horse"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/68px-Chess_bdt45.svg.png" alt="Elephant"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/68px-Chess_qdt45.svg.png" alt="minister"></td>
@@ -28,19 +42,19 @@
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/68px-Chess_bdt45.svg.png" alt="Elephant"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/68px-Chess_ndt45.svg.png" alt="horse"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/68px-Chess_rdt45.svg.png" alt="palace"></td> -->
-                        <td style="padding: 22px 40px;" id="A1">
-                            <span style="color: red;">A - 1</span>
-                        </td>
-                        <td id="A2"><span style="color: blue;" >2</span></td>
-                        <td id="A3"><span style="color: blue;" >3</span></td>
-                        <td id="A4"><span style="color: blue;">4</span></td>
-                        <td id="A5"><span style="color: blue;">5</span></td>
-                        <td id="A6"><span style="color: blue;">6</span></td>
-                        <td id="A7"><span style="color: blue;">7</span></td>
-                        <td id="A8"><span style="color: blue;">8</span></td>
-                    </tr>
-                    <tr>
-                        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
+        <td style="padding: 22px 40px" id="A1">
+          <span style="color: red">A - 1</span>
+        </td>
+        <td id="A2"><span style="color: blue">2</span></td>
+        <td id="A3"><span style="color: blue">3</span></td>
+        <td id="A4"><span style="color: blue">4</span></td>
+        <td id="A5"><span style="color: blue">5</span></td>
+        <td id="A6"><span style="color: blue">6</span></td>
+        <td id="A7"><span style="color: blue">7</span></td>
+        <td id="A8"><span style="color: blue">8</span></td>
+      </tr>
+      <tr>
+        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
@@ -48,59 +62,59 @@
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td> -->
-                        <td id="B1"><p style="color: red;">B</p></td>
-                        <td id="B2"></td>
-                        <td id="B3"></td>
-                        <td id="B4"></td>
-                        <td id="B5"></td>
-                        <td id="B6"></td>
-                        <td id="B7"></td>
-                        <td id="B8"></td>
-                    </tr>
-                        <div>
-                            <tr>
-                                <td id="C1"><p style="color: red;">C</p></td>
-                                <td id="C2"></td>
-                                <td id="C3"></td>
-                                <td id="C4"></td>
-                                <td id="C5"></td>
-                                <td id="C6"></td>
-                                <td id="C7"></td>
-                                <td id="C8"></td>
-                            </tr>
-                            <tr>
-                                <td id="D1"><p style="color: red;">D</p></td>
-                                <td id="D2"></td>
-                                <td id="D3"></td>
-                                <td id="D4"></td>
-                                <td id="D5"></td>
-                                <td id="D6"></td>
-                                <td id="D7"></td>
-                                <td id="D8"></td>
-                            </tr>
-                            <tr>
-                                <td id="E1"><p style="color: red;">E</p></td>
-                                <td id="E2"></td>
-                                <td id="E3"></td>
-                                <td id="E4"></td>
-                                <td id="E5"></td>
-                                <td id="E6"></td>
-                                <td id="E7"></td>
-                                <td id="E8"></td>
-                            </tr>
-                            <tr>
-                                <td id="F1"><p style="color: red;">F</p></td>
-                                <td id="F2"></td>
-                                <td id="F3"></td>
-                                <td id="F4"></td>
-                                <td id="F5"></td>
-                                <td id="F6"></td>
-                                <td id="F7"></td>
-                                <td id="F8"></td>
-                            </tr>
-                        </div>
-                    <tr>
-                        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
+        <td id="B1"><p style="color: red">B</p></td>
+        <td id="B2"></td>
+        <td id="B3"></td>
+        <td id="B4"></td>
+        <td id="B5"></td>
+        <td id="B6"></td>
+        <td id="B7"></td>
+        <td id="B8"></td>
+      </tr>
+      <div>
+        <tr>
+          <td id="C1"><p style="color: red">C</p></td>
+          <td id="C2"></td>
+          <td id="C3"></td>
+          <td id="C4"></td>
+          <td id="C5"></td>
+          <td id="C6"></td>
+          <td id="C7"></td>
+          <td id="C8"></td>
+        </tr>
+        <tr>
+          <td id="D1"><p style="color: red">D</p></td>
+          <td id="D2"></td>
+          <td id="D3"></td>
+          <td id="D4"></td>
+          <td id="D5"></td>
+          <td id="D6"></td>
+          <td id="D7"></td>
+          <td id="D8"></td>
+        </tr>
+        <tr>
+          <td id="E1"><p style="color: red">E</p></td>
+          <td id="E2"></td>
+          <td id="E3"></td>
+          <td id="E4"></td>
+          <td id="E5"></td>
+          <td id="E6"></td>
+          <td id="E7"></td>
+          <td id="E8"></td>
+        </tr>
+        <tr>
+          <td id="F1"><p style="color: red">F</p></td>
+          <td id="F2"></td>
+          <td id="F3"></td>
+          <td id="F4"></td>
+          <td id="F5"></td>
+          <td id="F6"></td>
+          <td id="F7"></td>
+          <td id="F8"></td>
+        </tr>
+      </div>
+      <tr>
+        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
@@ -108,17 +122,17 @@
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/68px-Chess_pdt45.svg.png" alt="soldier"></td> -->
-                        <td id="G1"><p style="color: red;">G</p></td>
-                        <td id="G2"></td>
-                        <td id="G3"></td>
-                        <td id="G4"></td>
-                        <td id="G5"></td>
-                        <td id="G6"></td>
-                        <td id="G7"></td>
-                        <td id="G8"></td>
-                    </tr>
-                    <tr>
-                        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/68px-Chess_rdt45.svg.png" alt="palace"></td>
+        <td id="G1"><p style="color: red">G</p></td>
+        <td id="G2"></td>
+        <td id="G3"></td>
+        <td id="G4"></td>
+        <td id="G5"></td>
+        <td id="G6"></td>
+        <td id="G7"></td>
+        <td id="G8"></td>
+      </tr>
+      <tr>
+        <!-- <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/68px-Chess_rdt45.svg.png" alt="palace"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/68px-Chess_ndt45.svg.png" alt="horse"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/68px-Chess_bdt45.svg.png" alt="Elephant"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/68px-Chess_qdt45.svg.png" alt="minister"></td>
@@ -126,15 +140,15 @@
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/68px-Chess_bdt45.svg.png" alt="Elephant"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/68px-Chess_ndt45.svg.png" alt="horse"></td>
                         <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/68px-Chess_rdt45.svg.png" alt="palace"></td> -->
-                        <td id="H1"><p style="color: red;">H</p></td>
-                        <td id="H2"></td>
-                        <td id="H3"></td>
-                        <td id="H4"></td>
-                        <td id="H5"></td>
-                        <td id="H6"></td>
-                        <td id="H7"></td>
-                        <td id="H8"></td>
-                    </tr>
-            </table>
-    </body>
+        <td id="H1"><p style="color: red">H</p></td>
+        <td id="H2"></td>
+        <td id="H3"></td>
+        <td id="H4"></td>
+        <td id="H5"></td>
+        <td id="H6"></td>
+        <td id="H7"></td>
+        <td id="H8"></td>
+      </tr>
+    </table>
+  </body>
 </html>
